@@ -1,0 +1,76 @@
+general {
+        output_format = "i3bar"
+        colors = false
+        markup = pango
+        interval = 3
+        color_good = '#2f343f'
+		color_degraded = '#ebcb8b'
+		color_bad = '#ba5e57'
+}
+
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "disk /"
+order += "disk /home"
+#order += "ethernet enp1s0"
+order += "memory"
+order += "wireless wlo1"
+order += "volume master"
+order += "battery 1"
+order += "tztime local"
+
+wireless wlo1 {
+                format_up = "<span background='#2ad927'> :%essid </span>"
+                format_down = "<span background='#565e56'> : null </span>"
+           }
+
+cpu_usage {
+        format = "<span background='#dc7633'> %usage </span>"
+}
+
+cpu_temperature 0 {
+        format = "<span background='#bf616a'>  %degrees °C </span>"
+        path = "/sys/class/thermal/thermal_zone0/temp"
+}
+
+disk "/" {
+        format = "<span background='#fec7cd'>  %free </span>"
+}
+
+disk "/home" {
+        format = "<span background='#a1d569'>  %free Free </span>"
+}
+
+
+
+volume master {
+        format = "<span background='#ebcb8b'>  %volume </span>"
+        format_muted = "<span background='#ebcb8b'>  Muted </span>"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+battery 1 {
+	last_full_capacity = true
+        format = "<span background='#a3be8c'>  %status %percentage </span>"
+        format_down = "No Battery"
+        status_chr = "Charging"
+        status_bat = "Batt"
+        status_unk = "Charged"
+        status_full = "Charged"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+}
+
+tztime local {
+		format = "<span background='#81a1c1'> %time </span>"
+		format_time = "%H:%M"
+}
+
+memory {
+    format= "<span background='#ebcb8b'> %available </span>"
+    threshold_degraded = "300M"
+    format_degraded = " Free RAM: %available "
+}
+
