@@ -8,7 +8,7 @@
 
 # Config2
 
-![](screens/Cheese_Thu-30Dec21_15.57.png)
+![](screens/Cheese_Sat-01Jan22_14.00.png)
 
 
 This repo is just to share config files how I setup my system (both Arch, ubuntu(regolith) and manjaro) 
