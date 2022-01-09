@@ -12,3 +12,9 @@
 
 
 This repo is just to share config files how I setup my system (both Arch, ubuntu(regolith) and manjaro) 
+
+## Bonus contents
+
+### Python based terminal timer for productivity
+
+[termdown](https://github.com/trehn/termdown)
