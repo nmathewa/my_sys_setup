@@ -18,3 +18,10 @@ This repo is just to share config files how I setup my system (both Arch, ubuntu
 ### Python based terminal timer for productivity
 
 [termdown](https://github.com/trehn/termdown)
+
+
+### Issue with GLIBCXX_3.X.XX not found
+
+```BASH
+sudo pamac upgrade -a
+```
