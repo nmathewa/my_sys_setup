@@ -19,6 +19,12 @@ This repo is just to share config files how I setup my system (both Arch, ubuntu
 
 [termdown](https://github.com/trehn/termdown)
 
+### Screenshots with flameshot
+
+[flameshot](https://flameshot.org/)
+
+![image](https://user-images.githubusercontent.com/66082244/196233020-3853b979-6f30-46f1-b506-306b319eed4a.png)
+
 
 ### Issue with GLIBCXX_3.X.XX not found
 
